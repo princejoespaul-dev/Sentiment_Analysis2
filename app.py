@@ -13,8 +13,12 @@ model = joblib.load('model.joblib')
 #LOADING SAVED TF-IDF VECOTORIZER
 vectorizer = joblib.load('tf_idf.joblib')
 
-@app.route("/predict",methods=['POST'])
+# Home Route (Fix for 404)
+@app.route("/")
+def home():
+    return "Sentiment Analysis API is running"
 
+@app.route("/predict",methods=['POST'])
 def predict():
 
     #READING THE INCOMING JSON DATA
@@ -43,6 +47,6 @@ def health():
 
 
 if __name__ == "__main__":
-    # app.run(debug=True,host="0.0.0.0",port=5000
-    port = int(os.environ.get('PORT',5000))
+    # app.run(debug=True,host="0.0.0.0",port=8000
+    port = int(os.environ.get('PORT',8000))
     app.run(host='0.0.0.0',port=port)
