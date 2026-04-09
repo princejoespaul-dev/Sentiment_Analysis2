@@ -13,7 +13,7 @@ model = joblib.load('model.joblib')
 vectorizer = joblib.load('tf_idf.joblib')
 
 # Home Route (Fix for 404)
-@app.route("/", methods=['GET'])
+@app.route('/', methods=['GET'])
 def home():
     return jsonify({
         'message': 'Sentiment Analysis API is running!',
@@ -53,4 +53,4 @@ def health():
 
 if __name__ == "__main__":
     # app.run(debug=True,host="0.0.0.0",port=8000
-    app.run(debug=True,host='0.0.0.0',port=8000)
+    app.run(debug=True,host="0.0.0.0",port=8000)
