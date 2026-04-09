@@ -1,11 +1,11 @@
 import re
 import nltk
 
-# nltk.download("stopwords") # Common English words to remove
-# nltk.download("wordnet") # Vocabulary for lemmatization
-# nltk.download("vader_lexicon")  # VADER Sentiment Dictionary
-# nltk.download("punkt") # Tokenizer Rules
-# nltk.download("punkt_tab")
+nltk.download("stopwords") # Common English words to remove
+nltk.download("wordnet") # Vocabulary for lemmatization
+nltk.download("vader_lexicon")  # VADER Sentiment Dictionary
+nltk.download("punkt") # Tokenizer Rules
+nltk.download("punkt_tab")
 
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
